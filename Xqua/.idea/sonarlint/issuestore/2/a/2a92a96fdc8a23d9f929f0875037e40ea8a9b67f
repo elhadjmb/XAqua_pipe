@@ -1,0 +1,41 @@
+
+python:S117S"^Rename this local variable "imageFilesDir" to match the regular expression ^[_a-z][a-z0-9_]*$.(ϊªΕ½ϊÿÿÿÿ8…Ήκκ¤1
+~python:S117["[Rename this local variable "numSamples" to match the regular expression ^[_a-z][a-z0-9_]*$.(ΈσςΠόÿÿÿÿ8†Ήκκ¤1
+vpython:S117Y"XRename this local variable "stdTemp" to match the regular expression ^[_a-z][a-z0-9_]*$.(χ²…Υ8†Ήκκ¤1
+bpython:S112">Replace this generic exception class with a more specific one.(¦τƒΧόÿÿÿÿ8†Ήκκ¤1
+|python:S5713΅"WRemove this redundant Exception class; it derives from another which is already caught.(‹‹£ϊÿÿÿÿ8‰Ήκκ¤1
+]python:S112Ά">Replace this generic exception class with a more specific one.(²Ι΄ό8‰Ήκκ¤1
+]python:S112Ό">Replace this generic exception class with a more specific one.(’‹β±8‰Ήκκ¤1
+]python:S112Κ">Replace this generic exception class with a more specific one.(Ή¤αΕ8‰Ήκκ¤1
+]python:S112Τ">Replace this generic exception class with a more specific one.(’‹β±8‰Ήκκ¤1
+Ypython:S1143Χ"9Remove this "return" statement from this "finally" block.(¦®°™8‰Ήκκ¤1
+bpython:S112έ">Replace this generic exception class with a more specific one.(Έ ώÿÿÿÿ8‰Ήκκ¤1
+‚python:S117ε"^Rename this local variable "imageFilesDir" to match the regular expression ^[_a-z][a-z0-9_]*$.(ϊªΕ½ϊÿÿÿÿ8‰Ήκκ¤1
+python:S117ξ"[Rename this local variable "numSamples" to match the regular expression ^[_a-z][a-z0-9_]*$.(ΈσςΠόÿÿÿÿ8Ήκκ¤1
+wpython:S117λ"XRename this local variable "stdTemp" to match the regular expression ^[_a-z][a-z0-9_]*$.(χ²…Υ8Ήκκ¤1
+]python:S112">Replace this generic exception class with a more specific one.(ΎΔϊ8Ήκκ¤1
+]python:S112΅">Replace this generic exception class with a more specific one.(ξ…Θ8Ήκκ¤1
+bpython:S112χ">Replace this generic exception class with a more specific one.(ΖΆΒψÿÿÿÿ8Ήκκ¤1
+qpython:S117"RRename this parameter "mAP_50" to match the regular expression ^[_a-z][a-z0-9_]*$.(ύΉϊ8Ήκκ¤1
+qpython:S117"RRename this parameter "mAP_75" to match the regular expression ^[_a-z][a-z0-9_]*$.(ύΉϊ8Ήκκ¤1
+upython:S107…"VFunction "get_hparam_dict" has 31 parameters, which is greater than the 13 authorized.(±‚ΐΎ8Ήκκ¤1
+vpython:S117ρ"WRename this local variable "mAP_50" to match the regular expression ^[_a-z][a-z0-9_]*$.(ΎΖΐ8Ήκκ¤1
+{python:S117ς"WRename this local variable "mAP_75" to match the regular expression ^[_a-z][a-z0-9_]*$.(Πϋΐώÿÿÿÿ8Ήκκ¤1
+vpython:S117€"RRename this parameter "mAP_50" to match the regular expression ^[_a-z][a-z0-9_]*$.(‚όΓ—ϋÿÿÿÿ8Ήκκ¤1
+vpython:S117€"RRename this parameter "mAP_75" to match the regular expression ^[_a-z][a-z0-9_]*$.(‚όΓ—ϋÿÿÿÿ8Ήκκ¤1
+zpython:S107ό"VFunction "pass_checkpoint" has 38 parameters, which is greater than the 13 authorized.(―ΨµΖόÿÿÿÿ8Ήκκ¤1
+]python:S112ϋ">Replace this generic exception class with a more specific one.(’‹β±8Ήκκ¤1
+]python:S112Ζ">Replace this generic exception class with a more specific one.(’‹β±8Ήκκ¤1
+]python:S112">Replace this generic exception class with a more specific one.(ίΰλΥ8Ήκκ¤1
+{python:S117κ"WRename this local variable "mAP_50" to match the regular expression ^[_a-z][a-z0-9_]*$.(‹«σ©όÿÿÿÿ8Ήκκ¤1
+{python:S117κ"WRename this local variable "mAP_75" to match the regular expression ^[_a-z][a-z0-9_]*$.(‹«σ©όÿÿÿÿ8‹Ήκκ¤1
+ppython:S107“"LFunction "start" has 19 parameters, which is greater than the 13 authorized.(ξλΤ¬ϊÿÿÿÿ8‹Ήκκ¤1
+xpython:S1226“"SIntroduce a new variable or use its initial value before reassigning 'num_classes'.(ξλΤ¬ϊÿÿÿÿ8‹Ήκκ¤1
+bpython:S112΅">Replace this generic exception class with a more specific one.(ψΝώÿÿÿÿ8‹Ήκκ¤1
+]python:S112ª">Replace this generic exception class with a more specific one.(Β«Η8‹Ήκκ¤1
+]python:S112³">Replace this generic exception class with a more specific one.(ι·Φ8‹Ήκκ¤1
+]python:S112Ί">Replace this generic exception class with a more specific one.(–Ζύξ8‹Ήκκ¤1
+bpython:S112Κ">Replace this generic exception class with a more specific one.(Ξψÿÿÿÿ8‹Ήκκ¤1
+]python:S112Ρ">Replace this generic exception class with a more specific one.(ΦτΜΙ8‹Ήκκ¤1
+>python:S125ε"Remove this commented out code.(΄ίκΞ8‹Ήκκ¤1
+bpython:S112³">Replace this generic exception class with a more specific one.(νθ°ÿÿÿÿÿ8‹Ήκκ¤1

@@ -1,0 +1,24 @@
+
+xpython:S18544"TRemove this assignment to local variable 'new_annotations'; the value is never used.(àÃäìùÿÿÿÿ8ÿ‹ë¤1
+xpython:S3776"TRefactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.(Š¯Œıÿÿÿÿÿ8ÿ‹ë¤1
+=python:S125"Remove this commented out code.(É—ó8ÿ‹ë¤1
+tpython:S3776†"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(úê×Ÿ8ÿ‹ë¤1
+tpython:S3776÷"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(‹­Ê¬8ÿ‹ë¤1
+Cpython:S125å"Remove this commented out code.(É›üúÿÿÿÿ8ÿ‹ë¤1
+‚python:S117ó"^Rename this local variable "imageFilesDir" to match the regular expression ^[_a-z][a-z0-9_]*$.(úªÅ½úÿÿÿÿ8ÿ‹ë¤1
+python:S117û"[Rename this local variable "numSamples" to match the regular expression ^[_a-z][a-z0-9_]*$.(¸óòĞüÿÿÿÿ8€Œë¤1
+wpython:S117ù"XRename this local variable "stdTemp" to match the regular expression ^[_a-z][a-z0-9_]*$.(÷²…Õ8€Œë¤1
+Rpython:S1481è"-Replace unused local variable "fig" with "_".(®ì üÿÿÿÿ8€Œë¤1
+Cpython:S125Œ"Remove this commented out code.(†ƒÒÅøÿÿÿÿ8€Œë¤1
+>python:S125™"Remove this commented out code.(…¬ÀÑ8€Œë¤1
+Lpython:S1481½",Remove the unused local variable "ovr_json".(“œø8€Œë¤1
+jpython:S3457Â"EAdd replacement fields or use a normal string instead of an f-string.(…Ïšëûÿÿÿÿ8€Œë¤1
+>python:S125Ê"Remove this commented out code.( ŒÿÏ8€Œë¤1
+>python:S125Õ"Remove this commented out code.(ÆÔœ¦8€Œë¤1
+Cpython:S125å"Remove this commented out code.(¶ì°úÿÿÿÿ8€Œë¤1
+Lpython:S1481ñ",Remove the unused local variable "ovr_json".(“œø8€Œë¤1
+Lpython:S1481ó",Remove the unused local variable "div_json".(î šº8€Œë¤1
+opython:S1854Ñ"JRemove this assignment to local variable 'sizes'; the value is never used.(×œÀøÿÿÿÿ8€Œë¤1
+tpython:S3776€"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(ì‡¿œ8€Œë¤1
+Cpython:S125ğ"Remove this commented out code.(›½õúÿÿÿÿ8€Œë¤1
+lpython:S5655¨"GChange this argument; Function "calculate_iou" expects a different type(„²˜£ûÿÿÿÿ8€Œë¤1
