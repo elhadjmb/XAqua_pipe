@@ -260,11 +260,11 @@ class CocoDataset():
 
 
 
-loc = r"D:\\TMP\\HTML"
-os.makedirs(loc, exist_ok=True)
-divv = r'C:\\Users\\LTSS2023\\Documents\\elhadjmb\\datasets\\blc_13\\annotations.json'
-divv = r"D:\\TMP\\blc_2\\annotations.json"
-annotation_path = divv
+# loc = r"D:\\TMP\\HTML"
+# os.makedirs(loc, exist_ok=True)
+# divv = r'C:\\Users\\LTSS2023\\Documents\\elhadjmb\\datasets\\blc_13\\annotations.json'
+# divv = r"D:\\TMP\\blc_2\\annotations.json"
+annotation_path = "/home/hadjm/PycharmProjects/AquaCounter/mrcnn/test_ds/train/_annotations.coco.json"
 image_dir = str(os.path.dirname(annotation_path))
 
 coco_dataset = CocoDataset(annotation_path, image_dir)
@@ -273,9 +273,9 @@ coco_dataset = CocoDataset(annotation_path, image_dir)
 #coco_dataset.display_categories()
 
 
-for i in range(20):
+for i in range(2):
     html = coco_dataset.display_image('random', use_url=False)
-    with open(rf'{loc}\biview_{i}.html','w') as f:
+    with open(rf'{image_dir}\biview_{i}.html','w') as f:
         f.write(html)
-    webbrowser.open_new_tab(rf'{loc}\biview_{i}.html')
+    webbrowser.open_new_tab(rf'{image_dir}\biview_{i}.html')
 

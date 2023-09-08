@@ -598,7 +598,7 @@ def augment_dataset(images_dir, annotation_file, output_dir, num_augmented_image
 
     augmented_annotations = {
         "images": [],
-        "annotations": []
+        "annotations": [],
     }
     msg(f"Starting image augmentation to {num_augmented_images}...")
     # Iterate over the images in the dataset
