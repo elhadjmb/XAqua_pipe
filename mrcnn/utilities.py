@@ -194,7 +194,7 @@ def load_checkpoint(root_path, model_name, model, optimizer, opt, num_classes):
     return model, optimizer, 0, 0, 0, 0
 
 
-def format_predictions(annotations, preds, preds_formatted=None, gt_formatted=None):
+def old_format_predictions(annotations, preds, preds_formatted=None, gt_formatted=None):
     # Format the predictions and ground-truths
     id_counter = 0  # Initialize a counter for unique annotation ids
     for i, pred in enumerate(preds):
@@ -320,6 +320,43 @@ def pass_checkpoint(root_path, model, optimizer, epoch, best_train_loss, best_va
     return exiting_pat, best_map
 
 
+def format_predictions(annotations, preds, preds_formatted=None, gt_formatted=None):
+    id_counter = 0  # Initialize a counter for unique annotation ids
+    for i, pred in enumerate(preds):
+        for j in range(len(pred['boxes'])):
+            if len(pred['masks']) > 0:
+                rle = maskUtils.encode(np.asfortranarray(pred['masks'][j].cpu().numpy().astype(np.uint8)))
+                segmentation = rle
+            else:
+                x, y, x2, y2 = map(int, pred['boxes'][j])
+                segmentation = [[x, y, x2, y, x2, y2, x, y2]]
+
+            preds_formatted.append({'image_id': i,
+                                    'category_id': pred['labels'][j].item(),
+                                    'bbox': pred['boxes'][j].tolist(),
+                                    'segmentation': segmentation,
+                                    'score': pred['scores'][j].item()})
+
+        for j in range(len(annotations[i]['boxes'])):
+            if len(annotations[i]['masks']) > 0:
+                rle = maskUtils.encode(np.asfortranarray(annotations[i]['masks'][j].cpu().numpy().astype(np.uint8)))
+                segmentation = rle
+            else:
+                x, y, x2, y2 = map(int, annotations[i]['boxes'][j])
+                segmentation = [[x, y, x2, y, x2, y2, x, y2]]
+
+            gt_formatted.append({'image_id': i,
+                                 'category_id': annotations[i]['labels'][j].item(),
+                                 'bbox': annotations[i]['boxes'][j].tolist(),
+                                 'area': annotations[i]['area'][j].item(),
+                                 'iscrowd': annotations[i]['iscrowd'][j].item(),
+                                 'segmentation': segmentation,
+                                 'id': id_counter})
+            id_counter += 1  # Increment the counter for each annotation
+
+    return preds_formatted, gt_formatted
+
+
 @wrp
 def evaluation(op_id, dataset, single_cat=False, preds_formatted=None, gt_formatted=None):
     # Convert predictions and ground-truths to COCO format
@@ -331,7 +368,8 @@ def evaluation(op_id, dataset, single_cat=False, preds_formatted=None, gt_format
                        'categories': categories}
 
     # coco_gt.dataset['images'] = [{'id': i} for i in range(len(dataset))]
-    coco_gt.dataset['images'] = [{'id': i, 'height': dataset[i][0].shape[1], 'width': dataset[i][0].shape[2]} for i in range(len(dataset))]
+    coco_gt.dataset['images'] = [{'id': i, 'height': dataset[i][0].shape[1], 'width': dataset[i][0].shape[2]} for i in
+                                 range(len(dataset))]
     coco_gt.createIndex()
 
     if not preds_formatted:
@@ -343,7 +381,7 @@ def evaluation(op_id, dataset, single_cat=False, preds_formatted=None, gt_format
     coco_preds = coco_gt.loadRes(preds_formatted)
 
     # Initialize COCO evaluator
-    coco_eval = COCOeval(coco_gt, coco_preds, 'segm')
+    coco_eval = COCOeval(coco_gt, coco_preds, 'bbox')  # FIXME: should be segm
 
     # Compute the mAP
     coco_eval.evaluate()
