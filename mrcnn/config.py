@@ -1,4 +1,4 @@
-dataset_root_path = r"/home/hadjm/PycharmProjects/AquaCounter/mrcnn/TEST8/test_ds_X"
+dataset_root_path = r"PATH"
 level_json = dataset_root_path + r"/level.json"
 optimized_best_hp = dataset_root_path + r"/optimized_best_hp.json"
 
